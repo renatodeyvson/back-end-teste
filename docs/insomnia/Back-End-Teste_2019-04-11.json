@@ -1,0 +1,180 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-04-11T23:38:50.408Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
+			"created": 1555024302567,
+			"description": "",
+			"modified": 1555024302567,
+			"name": "Back-End-Teste",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_0ba813b29e9045d2ba1a7e92bba03f5f",
+			"color": null,
+			"created": 1555024302672,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1555024302672,
+			"modified": 1555024302672,
+			"name": "New Environment",
+			"parentId": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_77c533efef6d4e2c99d1089c28fc97a2",
+			"cookies": [],
+			"created": 1555024302736,
+			"modified": 1555024302736,
+			"name": "Default Jar",
+			"parentId": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_5694d49a42194bb99872a599bb5f53e3",
+			"authentication": {},
+			"body": {},
+			"created": 1555024317765,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1555024317765,
+			"method": "GET",
+			"modified": 1555025694375,
+			"name": "Index",
+			"parameters": [],
+			"parentId": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:3000/api/phones?page=1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b569f2a1b4fc4449a8811613f5cce637",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"model\": \"\",\n  \"price\": \"\",\n  \"brand\": \"\",\n  \"photo\": \"\",\n  \"startDate\": \"\",\n  \"endDate\": \"\",\n  \"color\": \"\",\n  \"code\": \"\"\n}"
+			},
+			"created": 1555024444032,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_5e56c7fb51674c888e586ea19f5ce796",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1555024444032,
+			"method": "POST",
+			"modified": 1555025678961,
+			"name": "Find",
+			"parameters": [],
+			"parentId": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:3000/api/phones/find",
+			"_type": "request"
+		},
+		{
+			"_id": "req_de8cd5da77874654aa21fae0a09233b2",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"model\": \"G5S\",\n  \"price\": 1000.00,\n  \"brand\": \"Motorola\",\n  \"photo\": \"https://http2.mlstatic.com/motorola-moto-g5-original-dual-chip-16gb-3gb-ram-tela-5-D_NQ_NP_765374-MLB29525488708_022019-F.webp\",\n  \"startDate\": \"2019-01-01T00:00:00.000Z\",\n  \"endDate\": \"2019-01-01T00:00:00.000Z\",\n  \"color\": \"GOLD\",\n  \"code\": \"ABCD1234\"\n}"
+			},
+			"created": 1555024663232,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_23e9db7e1fb5441382a46a53771480e1",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1555024663232,
+			"method": "POST",
+			"modified": 1555025485281,
+			"name": "Add",
+			"parameters": [],
+			"parentId": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:3000/api/phones",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b728bba1ed544444a12b862637771960",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"model\": \"G5S\",\n  \"price\": 1000.00,\n  \"brand\": \"Motorolinhaaa\",\n  \"photo\": \"https://http2.mlstatic.com/motorola-moto-g5-original-dual-chip-16gb-3gb-ram-tela-5-D_NQ_NP_765374-MLB29525488708_022019-F.webp\",\n  \"startDate\": \"2019-01-01T00:00:00.000Z\",\n  \"endDate\": \"2019-01-01T00:00:00.000Z\",\n  \"color\": \"GOLD\",\n  \"code\": \"ABCD1234\"\n}"
+			},
+			"created": 1555025751449,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_9596c7b3634a44ee824c3e0da211807e",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1555025751449,
+			"method": "PUT",
+			"modified": 1555025793914,
+			"name": "Update",
+			"parameters": [],
+			"parentId": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:3000/api/phones/5cafcec71d7a412b0000d7f0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_3741b254de07453d97878cbaa9077f60",
+			"authentication": {},
+			"body": {},
+			"created": 1555025831871,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1555025831871,
+			"method": "DELETE",
+			"modified": 1555025833885,
+			"name": "Delete",
+			"parameters": [],
+			"parentId": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:3000/api/phones/5cafcec71d7a412b0000d7f0",
+			"_type": "request"
+		}
+	]
+}
