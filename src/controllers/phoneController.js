@@ -33,6 +33,12 @@ module.exports = {
                 description: 'O modelo deve ter no mínimo 2 e no máximo 255 caracteres, desprezando espaço em branco.'
             });
         }
+        if(price < 0){
+            return res.status(400).json({
+                message: 'Preço inválido.',
+                description: 'O preço deve ser um número positivo.'
+            });
+        }
         else{
             const phone = await Phone.create(req.body);
 
