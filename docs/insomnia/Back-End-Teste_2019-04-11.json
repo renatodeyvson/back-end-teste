@@ -1,7 +1,7 @@
 {
 	"_type": "export",
 	"__export_format": 3,
-	"__export_date": "2019-04-11T23:38:50.408Z",
+	"__export_date": "2019-04-12T01:45:13.796Z",
 	"__export_source": "insomnia.desktop.app:v6.3.2",
 	"resources": [
 		{
@@ -17,10 +17,13 @@
 			"_id": "env_0ba813b29e9045d2ba1a7e92bba03f5f",
 			"color": null,
 			"created": 1555024302672,
-			"data": {},
+			"data": {
+				"base": "https://back-end-teste.herokuapp.com/api",
+				"base2": "http://localhost:300/api"
+			},
 			"isPrivate": false,
 			"metaSortKey": 1555024302672,
-			"modified": 1555024302672,
+			"modified": 1555033099913,
 			"name": "New Environment",
 			"parentId": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
 			"_type": "environment"
@@ -42,9 +45,9 @@
 			"description": "",
 			"headers": [],
 			"isPrivate": false,
-			"metaSortKey": -1555024317765,
+			"metaSortKey": -1555025831921,
 			"method": "GET",
-			"modified": 1555025694375,
+			"modified": 1555033145472,
 			"name": "Index",
 			"parameters": [],
 			"parentId": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
@@ -54,7 +57,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "http://localhost:3000/api/phones?page=1",
+			"url": "{{ base  }}/phones?page=1",
 			"_type": "request"
 		},
 		{
@@ -62,7 +65,7 @@
 			"authentication": {},
 			"body": {
 				"mimeType": "application/json",
-				"text": "{\n\t\"model\": \"\",\n  \"price\": \"\",\n  \"brand\": \"\",\n  \"photo\": \"\",\n  \"startDate\": \"\",\n  \"endDate\": \"\",\n  \"color\": \"\",\n  \"code\": \"\"\n}"
+				"text": "{\n\t\"model\": \"5GS\",\n\t\"price\": 1000.00\n}"
 			},
 			"created": 1555024444032,
 			"description": "",
@@ -74,9 +77,9 @@
 				}
 			],
 			"isPrivate": false,
-			"metaSortKey": -1555024444032,
+			"metaSortKey": -1555025831896,
 			"method": "POST",
-			"modified": 1555025678961,
+			"modified": 1555033372133,
 			"name": "Find",
 			"parameters": [],
 			"parentId": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
@@ -86,7 +89,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "http://localhost:3000/api/phones/find",
+			"url": "{{ base  }}/phones/find",
 			"_type": "request"
 		},
 		{
@@ -94,7 +97,7 @@
 			"authentication": {},
 			"body": {
 				"mimeType": "application/json",
-				"text": "{\n\t\"model\": \"G5S\",\n  \"price\": 1000.00,\n  \"brand\": \"Motorola\",\n  \"photo\": \"https://http2.mlstatic.com/motorola-moto-g5-original-dual-chip-16gb-3gb-ram-tela-5-D_NQ_NP_765374-MLB29525488708_022019-F.webp\",\n  \"startDate\": \"2019-01-01T00:00:00.000Z\",\n  \"endDate\": \"2019-01-01T00:00:00.000Z\",\n  \"color\": \"GOLD\",\n  \"code\": \"ABCD1234\"\n}"
+				"text": "{\n\t\"model\": \"5GS\",\n\t\"price\": 2000.00,\n\t\"brand\": \"Motorola\",\n\t\"photo\": \"https://http2.mlstatic.com/motorola-moto-g5-original-dual-chip-16gb-3gb-ram-tela-5-D_NQ_NP_765374-MLB29525488708_022019-F.webp\",\n\t\"startDate\": \"01/01/2019\",\n\t\"endDate\": \"02/01/2019\",\n\t\"color\": \"GOLD\",\n\t\"code\": \"EFGH5678\"\n}"
 			},
 			"created": 1555024663232,
 			"description": "",
@@ -106,9 +109,9 @@
 				}
 			],
 			"isPrivate": false,
-			"metaSortKey": -1555024663232,
+			"metaSortKey": -1555025831883.5,
 			"method": "POST",
-			"modified": 1555025485281,
+			"modified": 1555033472247,
 			"name": "Add",
 			"parameters": [],
 			"parentId": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
@@ -118,7 +121,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "http://localhost:3000/api/phones",
+			"url": "{{ base  }}/phones",
 			"_type": "request"
 		},
 		{
@@ -138,9 +141,9 @@
 				}
 			],
 			"isPrivate": false,
-			"metaSortKey": -1555025751449,
+			"metaSortKey": -1555025831877.25,
 			"method": "PUT",
-			"modified": 1555025793914,
+			"modified": 1555033307576,
 			"name": "Update",
 			"parameters": [],
 			"parentId": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
@@ -150,7 +153,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "http://localhost:3000/api/phones/5cafcec71d7a412b0000d7f0",
+			"url": "{{ base  }}/phones/5cafec8e4bfd3600174809c2",
 			"_type": "request"
 		},
 		{
@@ -163,7 +166,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1555025831871,
 			"method": "DELETE",
-			"modified": 1555025833885,
+			"modified": 1555033324081,
 			"name": "Delete",
 			"parameters": [],
 			"parentId": "wrk_fc836f1c68c64cc69aec9fe44bfffc3e",
@@ -173,7 +176,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "http://localhost:3000/api/phones/5cafcec71d7a412b0000d7f0",
+			"url": "{{ base  }}/phones/5cafec8e4bfd3600174809c2",
 			"_type": "request"
 		}
 	]
