@@ -38,6 +38,12 @@ module.exports = {
                 description: 'O modelo deve ter no mínimo 2 e no máximo 255 caracteres, desprezando espaços em branco.'
             });
         }
+        if(!alphanumeric(model)) {
+            return res.status(400).json({
+                message: 'Modelo inválido.',
+                description: 'Modelo com caracteres inválidos.'
+            });
+        }
         if(price < 0){
             return res.status(400).json({
                 message: 'Preço inválido.',
@@ -48,6 +54,12 @@ module.exports = {
             return res.status(400).json({
                 message: 'Marca inválida.',
                 description: 'A marca deve ter no mínimo 2 e no máximo 255 caracteres, desprezando espaços em branco.'
+            });
+        }
+        if(!alphanumeric(brand)) {
+            return res.status(400).json({
+                message: 'Marca inválida.',
+                description: 'Marca com caracteres inválidos.'
             });
         }
         if(noSpacePhoto.length > 255){
@@ -86,27 +98,30 @@ module.exports = {
                 description: 'O código deve ter 8 caracteres.'
             });
         }
-        else{
-            try{
+        if(!alphanumeric(code)) {
+            return res.status(400).json({
+                message: 'Código inválido.',
+                description: 'Código com caracteres inválidos.'
+            });
+        }
+        
+        try{
 
-                const phone = await Phone.create(req.body);
+            const phone = await Phone.create(req.body);
 
-                return res.json(phone);
-                
-            } catch(err){
+            return res.json(phone);
 
-                //E11000 duplicate key error
-                if(err.code === 11000){
-                    return res.status(400).json({
-                        message: 'Código inválido.',
-                        description: 'O código não deve se repetir.'
-                    });
-                }
+        } catch(err){
 
-                return res.status(500).json(err);
-
+            //E11000 duplicate key error
+            if(err.code === 11000){
+                return res.status(400).json({
+                    message: 'Código inválido.',
+                    description: 'O código não deve se repetir.'
+                });
             }
-            
+
+            return res.status(500).json(err);
         }
     },
 
