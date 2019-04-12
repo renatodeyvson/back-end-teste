@@ -7,8 +7,8 @@ const phoneSchema = new mongoose.Schema({
     price: { type: Number, required: true },
     brand: { type: String, required: true },
     photo: { type: String, required: true },
-    startDate: { type: Date, required: true },
-    endDate: { type: Date, required: true },
+    startDate: { type: String, required: true },
+    endDate: { type: String, required: true },
     color: { type: String, enum: ['BLACK', 'WHITE', 'GOLD', 'PINK'], required: true },
     createdAt: { type: Date, default: Date.now }
 });
