@@ -31,7 +31,7 @@ module.exports = {
         const noSpacePhoto = photo.replace(/ /g, '');
         const utcStartDate = convertDate(startDate);
         const utcEndDate = convertDate(endDate);
-        console.log(noSpacePhoto.length);
+        
         if(noSpaceModel.length < 2 || noSpaceModel.length > 255){
             return res.status(400).json({
                 message: 'Modelo inválido.',
@@ -80,10 +80,33 @@ module.exports = {
                 description: 'A data de fim da venda deve ser posterior a data de início.'
             });
         }
+        if(code.length != 8){
+            return res.status(400).json({
+                message: 'Código inválido.',
+                description: 'O código deve ter 8 caracteres.'
+            });
+        }
         else{
-            const phone = await Phone.create(req.body);
+            try{
 
-            return res.json(phone);
+                const phone = await Phone.create(req.body);
+
+                return res.json(phone);
+                
+            } catch(err){
+
+                //E11000 duplicate key error
+                if(err.code === 11000){
+                    return res.status(400).json({
+                        message: 'Código inválido.',
+                        description: 'O código não deve se repetir.'
+                    });
+                }
+
+                return res.status(500).json(err);
+
+            }
+            
         }
     },
 
